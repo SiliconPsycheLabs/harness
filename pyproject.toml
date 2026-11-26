@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "splabs-harness"
+dynamic = ["version"]
+description = "What makes an AI agent do office work behind a deterministic gate: skills with fixed tools, the rules compiled from the tools' own fields, requests with a machine check, and the count."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [{ name = "Silicon Psyche Labs" }]
+dependencies = ["splabs-gate @ git+https://github.com/SiliconPsycheLabs/gate", "cel-python>=0.5", "python-docx>=1.1"]
+keywords = ["agents", "llm", "tool-calling", "policy", "office", "mcp"]
+
+[project.urls]
+Homepage = "https://splabs.io"
+Results = "https://github.com/SiliconPsycheLabs/harness-results"
+Gate = "https://github.com/SiliconPsycheLabs/gate"
+
+[project.optional-dependencies]
+odoo = ["psycopg2-binary", "playwright", "pgserver"]
+openai = ["openai"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+path = "harness/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["harness"]
