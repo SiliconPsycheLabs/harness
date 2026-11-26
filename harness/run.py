@@ -58,6 +58,12 @@ def table_hash(table):
     return hashlib.sha256(json.dumps(table, sort_keys=True).encode()).hexdigest()[:12]
 
 
+def prepare(sk, task, handle):
+    """What a request needs to find in the company before the agent starts (a PDF in the inbox, a file to attach)."""
+    if hasattr(sk._check, "prepare"):
+        sk._check.prepare(task, handle)
+
+
 def score(sk, task, root, before):
     """What the run left on disk, read apart from the model and the gate."""
     after = sk._check.outside(root)
@@ -76,6 +82,7 @@ def golden(name):
     tasks = tasks_of(sk)
     for task in tasks:
         handle = co.build(tmp / task["id"], f"golden:{name}:{task['id']}")
+        prepare(sk, task, handle)
         before = sk._check.outside(handle)
         box = gatebox.Box(table)
         call = sk.golden(task)
@@ -126,6 +133,7 @@ def run(name, out, threads=6):
             root = files / arm / task["id"]
             shutil.rmtree(root, ignore_errors=True)
             handle = co.build(root, key(j))
+            prepare(sk, task, handle)
             before = sk._check.outside(handle)
             box = gatebox.Box(table)
             try:
@@ -200,6 +208,7 @@ def replay(name, out):
         root = files / row["arm"] / row["task"]
         shutil.rmtree(root, ignore_errors=True)
         co.build(root, row["key"])
+        prepare(sk, tasks[row["task"]], root)
         before = sk._check.outside(root)
         for s in row["steps"]:
             if s.get("ran") and s.get("args") is not None:

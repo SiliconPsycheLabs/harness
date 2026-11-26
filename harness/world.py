@@ -4,7 +4,7 @@ import os
 
 from docx import Document
 
-READ = ["/acme/contracts"]
+READ = ["/acme/contracts", "/acme/inbox"]
 WRITE = ["/acme/documents"]
 START = {
     "/acme/documents/README.txt": "Documents written by the office.\n",

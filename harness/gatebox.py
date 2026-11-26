@@ -32,8 +32,12 @@ def build_table(skills, name, read=(), write=(), register=None):
             names = ", ".join(json.dumps(str(x), ensure_ascii=False) for x in register[rule["list"]])
             t["doors"][tool].setdefault("requires", []).append(
                 {"if": "expr", "expr": f'args.arguments["{field}"] in [{names}]', "else": rule["else"]})
-        for tool, conds in lim.get("requires", {}).items():
-            t["doors"][tool].setdefault("requires", []).extend(conds)
+        for tool, conds in lim.get("requires", {}).items():       # `{{list:NAME}}` in a condition is a list of the company
+            for c in conds:
+                expr = c["expr"]
+                for key, values in register.items():
+                    expr = expr.replace("{{list:" + key + "}}", "[" + ", ".join(json.dumps(str(x), ensure_ascii=False) for x in values) + "]")
+                t["doors"][tool].setdefault("requires", []).append({**c, "expr": expr})
     rights = {}
     for d in read:
         rights.setdefault(d.rstrip("/"), {})["read"] = True

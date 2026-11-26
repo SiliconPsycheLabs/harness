@@ -26,6 +26,9 @@ A new skill therefore arrives with its rules.
 | Skill | Where it works | Tools |
 | --- | --- | --- |
 | `word` | the company's file tree | `write_docx` |
+| `excel` | the company's file tree | `write_xlsx` |
+| `pdf` | the company's file tree | `read_pdf`, `save_record` |
+| `mail` | the company's file tree and an outbox | `find_contact`, `send_mail` |
 | `supplier_bill` | a real accounting application (Odoo 17, invented data) | `find_supplier`, `create_supplier_bill`, `create_supplier`, `set_supplier_bank` |
 
 ## Run one
@@ -80,5 +83,5 @@ Apache-2.0. The engine is open; the companies, people and amounts in the request
 ## In plain words
 
 This is the program that lets an AI agent do an office job (write a document, enter an invoice in the accounts) while
-fixed rules decide every action before it happens. It comes with ready-made jobs, test requests whose right answer is
+fixed rules decide every action before it happens. It comes with ready-made jobs (documents, spreadsheets, reading invoices, mail, entering invoices in the accounts), test requests whose right answer is
 known in advance, and a count of how many came out right and how many times the agent was stopped.
