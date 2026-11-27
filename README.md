@@ -51,6 +51,7 @@ Two more things a skill can say in its `skill.json`:
 | `doc_search` | the company's contracts and policies | `search_documents`, `read_document`, `save_answer` |
 | `database` | the company's sales database (SQLite), behind the gate's SQL reader | `describe_database`, `run_query`, `save_answer` |
 | `payments` | the same accounting application | `list_open_bills`, `pay_bill` (held for a person) |
+| `browser` | the accounting application through its own pages, in a real browser | `look`, `click`, `type_text` |
 | `credit_control` | the accounting application and an outbox | `list_overdue_invoices`, `send_reminder`, `write_off_invoice`, `extend_due_date` |
 | `accounts_payable` | the file tree and the accounting application together | the tools of `pdf`, `supplier_bill` and `mail` |
 

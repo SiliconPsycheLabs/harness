@@ -100,6 +100,20 @@ def screenshot(h, move_id, path):
 def finish(h, row, task):
     """Keep the screen of the bill for a request of ordinary work run with the gate deciding, then drop the database."""
     out = {}
+    if getattr(h, "_page", None) is not None:      # a skill that works through the browser: the screen as the agent left it
+        try:
+            if os.environ.get("HARNESS_SCREENS", "1") == "1" and not task.get("outside") and row.get("arm") == "enforce" and not row.get("error"):
+                h._page.screenshot(path=os.path.join(h.root, "screen.png"))
+                out["screen"] = True
+        except Exception as x:  # noqa: BLE001
+            out["screen_error"] = f"{type(x).__name__}: {x}"[:200]
+        for name in ("_browser", "_pw"):
+            try:
+                (getattr(h, name).close if name == "_browser" else getattr(h, name).stop)()
+            except Exception:  # noqa: BLE001
+                pass
+        h._page = None
+        task = {**task, "outside": True}            # no second screen below
     try:
         if os.environ.get("HARNESS_SCREENS", "1") == "1" and not task.get("outside") and row.get("arm") == "enforce" and not row.get("error"):
             number = task["bill"]["number"] if task.get("bill") else (task.get("pay") or task.get("remind") or [None])[0]
