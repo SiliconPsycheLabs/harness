@@ -59,6 +59,9 @@ Two more things a skill can say in its `skill.json`:
 | `browser` | the accounting application through its own pages, in a real browser | `look`, `click`, `type_text` |
 | `credit_control` | the accounting application and an outbox | `list_overdue_invoices`, `send_reminder`, `write_off_invoice`, `extend_due_date` |
 | `accounts_payable` | the file tree and the accounting application together | the tools of `pdf`, `supplier_bill` and `mail` |
+| `meeting_desk` | the file tree, the calendar and an outbox | the tools of `calendar`, `word` and `mail` |
+| `sales_report` | the company's database, the file tree and an outbox | the tools of `database`, `excel`, `calendar` (the staff directory) and `mail` |
+| `payment_run` | the accounting application and an outbox | the tools of `payments` and `mail` |
 
 ## Run one
 

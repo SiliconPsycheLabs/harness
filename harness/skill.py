@@ -31,6 +31,10 @@ class Skill:
             for kind in ("closed", "requires", "held"):
                 mine.setdefault(kind, {}).update({k: v for k, v in lim.get(kind, {}).items() if k in names})
             mine.setdefault("one_of", {}).update({k: v for k, v in lim.get("one_of", {}).items() if k.split(".")[0] in names})
+            if lim.get("database") and "run_query" in names:      # the company's database comes with its rights
+                mine["database"] = lim["database"]
+            if lim.get("hosts"):                                  # the outside hosts the other skill's tools may reach
+                mine["hosts"] = sorted(set(mine.get("hosts", [])) | set(lim["hosts"]))
             self._owner.update({n: o for n in names})
         self._tool = _module(self.folder / "tool.py", f"harness_skill_{self.name}_tool") if (self.folder / "tool.py").is_file() else None
         self._check = _module(self.folder / "check.py", f"harness_skill_{self.name}_check")
