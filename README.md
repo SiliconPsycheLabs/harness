@@ -62,6 +62,7 @@ Two more things a skill can say in its `skill.json`:
 | `meeting_desk` | the file tree, the calendar and an outbox | the tools of `calendar`, `word` and `mail` |
 | `sales_report` | the company's database, the file tree and an outbox | the tools of `database`, `excel`, `calendar` (the staff directory) and `mail` |
 | `payment_run` | the accounting application and an outbox | the tools of `payments` and `mail` |
+| `purchasing` | the file tree (quotes in the inbox) and an outbox | the tools of `pdf`, `excel` and `mail`, and a hold of its own on the order mail |
 
 ## Run one
 
