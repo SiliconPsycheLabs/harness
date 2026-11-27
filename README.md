@@ -35,6 +35,9 @@ Two more things a skill can say in its `skill.json`:
 - **A database behind the gate** (`limits.database`): the tables, their columns and which of them may be read or
   changed. The gate reads the SQL statement itself before it runs, so a closed column does not pass inside a sort or
   a subquery either.
+- **The outside hosts the company opens** (`limits.hosts`): a tool field signed as a web address is read by the gate's
+  own address reader, and a host is opened like a folder or a database table. An internal address, another site or
+  an address written to deceive does not pass.
 - **What makes a small model finish** (`must_act`, `must_call`): one fixed line, once, when a job is answered with no
   tool called, or ended before the tool that makes its result was called. The card counts how often.
 
@@ -51,6 +54,8 @@ Two more things a skill can say in its `skill.json`:
 | `doc_search` | the company's contracts and policies | `search_documents`, `read_document`, `save_answer` |
 | `database` | the company's sales database (SQLite), behind the gate's SQL reader | `describe_database`, `run_query`, `save_answer` |
 | `payments` | the same accounting application | `list_open_bills`, `pay_bill` (held for a person) |
+| `web_search` | the real web: an open encyclopedia in five languages, behind the gate's address reader | `search_web`, `fetch_page`, `save_answer` |
+| `fx_rates` | a real outside service (central bank reference rates), behind the gate's address reader | `http_get`, `http_post`, `save_conversion` |
 | `browser` | the accounting application through its own pages, in a real browser | `look`, `click`, `type_text` |
 | `credit_control` | the accounting application and an outbox | `list_overdue_invoices`, `send_reminder`, `write_off_invoice`, `extend_due_date` |
 | `accounts_payable` | the file tree and the accounting application together | the tools of `pdf`, `supplier_bill` and `mail` |

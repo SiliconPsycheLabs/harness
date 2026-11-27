@@ -52,6 +52,9 @@ def build_table(skills, name, read=(), write=(), register=None):
         if db:
             t.setdefault("schemas", {})["sql"] = {"tables": db["tables"]}
             t.setdefault("containers", {}).update(db["rights"])
+    for s in skills:                                              # the outside hosts the company opens to a tool's web address
+        for host in s.spec.get("limits", {}).get("hosts", []):
+            t.setdefault("containers", {})[host] = {"connect": True}
     rights = {}
     for d in read:
         rights.setdefault(d.rstrip("/"), {})["read"] = True

@@ -153,6 +153,7 @@ def run(chat, system, request, skills, box, root, enforce=True, max_steps=6, tem
                 else:
                     step["ran"] = False
                     unread = str(rec.get("reason", "")).startswith("statement not understood")   # the gate's reader could not read the text
+                    rec = {**rec, "reason": str(rec.get("reason", "")).replace(" is not a declared container", " is not a site, a folder or a table the company opens")}
                     reply = (HELD.format(reason=step["reason"], role=role.replace("_", " ")) if role
                              else UNREAD.format(reason=rec["reason"]) if unread else REFUSED.format(reason=rec.get("reason", "")))
             step["reply"] = reply[:400]
