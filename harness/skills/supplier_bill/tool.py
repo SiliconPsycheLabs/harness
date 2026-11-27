@@ -39,6 +39,9 @@ def find_supplier(h, name):
 
 def create_supplier_bill(h, supplier, number, date, lines, total, due_date=None):
     pid = _supplier(h, supplier)
+    for n, x in enumerate(lines, 1):
+        if float(x["quantity"]) <= 0:
+            raise ValueError(f"line {n} has quantity {x['quantity']}: enter only the lines the invoice has, each with its quantity")
     added = round(sum(float(x["quantity"]) * float(x["unit_price"]) for x in lines), 2)
     if abs(added - float(total)) > 0.01:
         raise ValueError(f"the lines add up to {added:.2f}, not to the total {float(total):.2f}")

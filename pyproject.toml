@@ -10,7 +10,7 @@ readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.10"
 authors = [{ name = "Silicon Psyche Labs" }]
-dependencies = ["splabs-gate @ git+https://github.com/SiliconPsycheLabs/gate", "cel-python>=0.5", "python-docx>=1.1", "openpyxl>=3.1", "pypdf>=4", "reportlab>=4"]
+dependencies = ["splabs-gate @ git+https://github.com/SiliconPsycheLabs/gate", "cel-python>=0.5", "python-docx>=1.1", "openpyxl>=3.1", "pypdf>=4", "reportlab>=4", "python-pptx>=1.0", "sqlglot>=25"]
 keywords = ["agents", "llm", "tool-calling", "policy", "office", "mcp"]
 
 [project.urls]

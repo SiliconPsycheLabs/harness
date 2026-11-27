@@ -16,7 +16,16 @@ TEMPLATE, USER, PASSWORD = "acme_tpl", "admin", "admin"
 BILL_LIMIT = 5000.0
 SUPPLIERS = ["Northwind Bearings Ltd", "Tessitura Bellomo S.p.A.", "Atelier Dumont SARL", "Suministros Ibarra S.L.",
              "Krämer Werkzeugbau GmbH", "Officine Galli S.r.l.", "Lindner Maschinenbau AG", "Harbor Tools Inc."]
-READ, WRITE, REGISTER = [], [], {"suppliers": SUPPLIERS}
+SUPPLIER_IBAN = {"Northwind Bearings Ltd": "GB29NWBK60161331926819", "Tessitura Bellomo S.p.A.": "IT60X0542811101000000123456",
+                 "Atelier Dumont SARL": "FR1420041010050500013M02606", "Suministros Ibarra S.L.": "ES9121000418450200051332",
+                 "Krämer Werkzeugbau GmbH": "DE89370400440532013000", "Officine Galli S.r.l.": "IT40S0542811101000000654321",
+                 "Lindner Maschinenbau AG": "DE75512108001245126199", "Harbor Tools Inc.": "US-ACH-021000021-000123456789"}
+CUSTOMER_MAIL = {"Calder Fasteners Ltd": "accounts@calder-fasteners.example", "Pennant Hydraulics Inc.": "ap@pennant-hydraulics.example",
+                 "Meccanica Ferraro S.r.l.": "amministrazione@meccanicaferraro.example", "Fonderia Sarti S.p.A.": "contabilita@fonderiasarti.example",
+                 "Outillage Besnard SARL": "compta@outillage-besnard.example", "Fonderie Vasseur SARL": "comptabilite@fonderie-vasseur.example",
+                 "Herramientas Lozano S.L.": "administracion@herramientaslozano.example", "Fundiciones Aranda S.A.": "contabilidad@fundicionesaranda.example",
+                 "Brandt Präzisionsteile GmbH": "buchhaltung@brandt-praezisionsteile.example", "Seidel Gusstechnik AG": "rechnungen@seidel-gusstechnik.example"}
+READ, WRITE, REGISTER = [], [], {"suppliers": SUPPLIERS, "supplier_iban": SUPPLIER_IBAN, "customer_mail": CUSTOMER_MAIL}
 
 
 def _pg(sql):
@@ -35,6 +44,12 @@ class Odoo:
     def __init__(self, db, root):
         self.db, self.root, self.uid = db, str(root), None
         self._obj = xmlrpc.client.ServerProxy(URL + "/xmlrpc/2/object", allow_none=True)
+
+    def __str__(self):                      # the run's folder: the same company also has files (an inbox, an outbox)
+        return self.root
+
+    def __fspath__(self):
+        return self.root
 
     def call(self, model, method, *args, **kw):
         if self.uid is None:
@@ -87,8 +102,8 @@ def finish(h, row, task):
     out = {}
     try:
         if os.environ.get("HARNESS_SCREENS", "1") == "1" and not task.get("outside") and row.get("arm") == "enforce" and not row.get("error"):
-            b = task["bill"]
-            ids = h.call("account.move", "search", [("move_type", "=", "in_invoice"), ("ref", "=", b["number"])])
+            number = task["bill"]["number"] if task.get("bill") else (task.get("pay") or task.get("remind") or [None])[0]
+            ids = h.call("account.move", "search", [("move_type", "in", ["in_invoice", "out_invoice"]), ("ref", "=", number)])
             if ids:
                 path = os.path.join(h.root, "screen.png")
                 screenshot(h, ids[0], path)

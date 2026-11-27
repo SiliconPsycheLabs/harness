@@ -1,0 +1,1924 @@
+[
+ {
+  "id": "internal-en-1",
+  "kind": "internal",
+  "lang": "en",
+  "title": "Price list",
+  "title_has": "Price list",
+  "date": "2027-02-04",
+  "minutes": 60,
+  "attendees": [
+   "owen.blake@acme.example",
+   "lucia.marin@acme.example"
+  ],
+  "start": "14:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-04",
+    "start": "09:00",
+    "end": "09:30",
+    "attendees": [
+     "owen.blake@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-04",
+    "start": "09:30",
+    "end": "11:30",
+    "attendees": [
+     "lucia.marin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-04",
+    "start": "13:30",
+    "end": "14:30",
+    "attendees": [
+     "lucia.marin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-04",
+    "start": "11:30",
+    "end": "12:30",
+    "attendees": [
+     "lucia.marin@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Book a 60-minute meeting \"Price list\" on 4 February 2027 for Owen Blake, Lucia Marin, at the first time when everyone is free in the afternoon."
+ },
+ {
+  "id": "with_supplier-en-2",
+  "kind": "with_supplier",
+  "lang": "en",
+  "title": "Production plan",
+  "title_has": "Production plan",
+  "date": "2027-02-08",
+  "minutes": 60,
+  "attendees": [
+   "lucia.marin@acme.example",
+   "tom.reyes@acme.example",
+   "sales@harbortools.example"
+  ],
+  "start": "14:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-08",
+    "start": "10:30",
+    "end": "12:30",
+    "attendees": [
+     "lucia.marin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-08",
+    "start": "15:00",
+    "end": "17:00",
+    "attendees": [
+     "lucia.marin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-08",
+    "start": "13:00",
+    "end": "13:30",
+    "attendees": [
+     "lucia.marin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-08",
+    "start": "10:00",
+    "end": "11:30",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-08",
+    "start": "12:00",
+    "end": "14:00",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-08",
+    "start": "15:00",
+    "end": "16:00",
+    "attendees": [
+     "sales@harbortools.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Book a 60-minute meeting \"Production plan\" on 8 February 2027 for Lucia Marin, Tom Reyes and Harbor Tools, at the first time when everyone is free in the afternoon."
+ },
+ {
+  "id": "internal-en-3",
+  "kind": "internal",
+  "lang": "en",
+  "title": "Price list",
+  "title_has": "Price list",
+  "date": "2027-01-25",
+  "minutes": 30,
+  "attendees": [
+   "paolo.ferri@acme.example",
+   "owen.blake@acme.example"
+  ],
+  "start": "14:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "paolo.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "09:30",
+    "end": "10:00",
+    "attendees": [
+     "paolo.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "15:00",
+    "end": "16:30",
+    "attendees": [
+     "owen.blake@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Book a 30-minute meeting \"Price list\" on 25 January 2027 for Paolo Ferri, Owen Blake, at the first time when everyone is free in the afternoon."
+ },
+ {
+  "id": "with_supplier-en-4",
+  "kind": "with_supplier",
+  "lang": "en",
+  "title": "Production plan",
+  "title_has": "Production plan",
+  "date": "2027-01-18",
+  "minutes": 90,
+  "attendees": [
+   "neil.carver@acme.example",
+   "anna.keller@acme.example",
+   "tom.reyes@acme.example",
+   "orders@northwind-bearings.example"
+  ],
+  "start": "16:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "09:00",
+    "end": "09:30",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "11:00",
+    "end": "12:00",
+    "attendees": [
+     "anna.keller@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "14:30",
+    "end": "16:00",
+    "attendees": [
+     "anna.keller@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "09:30",
+    "end": "10:30",
+    "attendees": [
+     "anna.keller@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "13:00",
+    "end": "14:00",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "14:30",
+    "end": "15:30",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "13:00",
+    "end": "15:00",
+    "attendees": [
+     "orders@northwind-bearings.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Book a 90-minute meeting \"Production plan\" on 18 January 2027 for Neil Carver, Anna Keller, Tom Reyes and Northwind Bearings, at the first time when everyone is free in the afternoon."
+ },
+ {
+  "id": "internal-it-5",
+  "kind": "internal",
+  "lang": "it",
+  "title": "Qualità fornitori",
+  "title_has": "Qualità fornitori",
+  "date": "2027-01-12",
+  "minutes": 90,
+  "attendees": [
+   "luca.ferri@acme.example",
+   "marta.leone@acme.example"
+  ],
+  "start": "14:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "11:00",
+    "end": "11:30",
+    "attendees": [
+     "luca.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "16:30",
+    "end": "18:30",
+    "attendees": [
+     "luca.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "09:30",
+    "end": "11:30",
+    "attendees": [
+     "luca.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "09:00",
+    "end": "09:30",
+    "attendees": [
+     "marta.leone@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "15:30",
+    "end": "17:00",
+    "attendees": [
+     "marta.leone@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Fissa una riunione di 90 minuti \"Qualità fornitori\" il 12 gennaio 2027 per Luca Ferri, Marta Leone, al primo orario in cui tutti sono liberi nel pomeriggio."
+ },
+ {
+  "id": "with_supplier-it-6",
+  "kind": "with_supplier",
+  "lang": "it",
+  "title": "Piano di produzione",
+  "title_has": "Piano di produzione",
+  "date": "2027-02-11",
+  "minutes": 90,
+  "attendees": [
+   "luca.ferri@acme.example",
+   "elena.sarti@acme.example",
+   "commerciale@tessiturabellomo.example"
+  ],
+  "start": "10:00",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-11",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "luca.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-11",
+    "start": "11:30",
+    "end": "12:00",
+    "attendees": [
+     "elena.sarti@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-11",
+    "start": "13:00",
+    "end": "14:30",
+    "attendees": [
+     "commerciale@tessiturabellomo.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Fissa una riunione di 90 minuti \"Piano di produzione\" il 11 febbraio 2027 per Luca Ferri, Elena Sarti e Tessitura Bellomo, al primo orario in cui tutti sono liberi al mattino."
+ },
+ {
+  "id": "internal-it-7",
+  "kind": "internal",
+  "lang": "it",
+  "title": "Qualità fornitori",
+  "title_has": "Qualità fornitori",
+  "date": "2027-03-05",
+  "minutes": 90,
+  "attendees": [
+   "marta.leone@acme.example",
+   "stefano.riva@acme.example",
+   "elena.sarti@acme.example"
+  ],
+  "start": "09:30",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "12:30",
+    "end": "14:30",
+    "attendees": [
+     "marta.leone@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "13:00",
+    "end": "15:00",
+    "attendees": [
+     "marta.leone@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "14:30",
+    "end": "15:30",
+    "attendees": [
+     "marta.leone@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "12:00",
+    "end": "14:00",
+    "attendees": [
+     "stefano.riva@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "16:30",
+    "end": "18:30",
+    "attendees": [
+     "stefano.riva@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "09:00",
+    "end": "09:30",
+    "attendees": [
+     "stefano.riva@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-05",
+    "start": "12:00",
+    "end": "13:30",
+    "attendees": [
+     "elena.sarti@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Fissa una riunione di 90 minuti \"Qualità fornitori\" il 5 marzo 2027 per Marta Leone, Stefano Riva, Elena Sarti, al primo orario in cui tutti sono liberi al mattino."
+ },
+ {
+  "id": "with_supplier-it-8",
+  "kind": "with_supplier",
+  "lang": "it",
+  "title": "Revisione del budget",
+  "title_has": "Revisione del budget",
+  "date": "2027-02-11",
+  "minutes": 90,
+  "attendees": [
+   "luca.ferri@acme.example",
+   "giulia.conti@acme.example",
+   "ordini@officinegalli.example"
+  ],
+  "start": "14:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-11",
+    "start": "12:00",
+    "end": "12:30",
+    "attendees": [
+     "luca.ferri@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-11",
+    "start": "14:00",
+    "end": "14:30",
+    "attendees": [
+     "giulia.conti@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-11",
+    "start": "11:00",
+    "end": "11:30",
+    "attendees": [
+     "ordini@officinegalli.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Fissa una riunione di 90 minuti \"Revisione del budget\" il 11 febbraio 2027 per Luca Ferri, Giulia Conti e Officine Galli, al primo orario in cui tutti sono liberi nel pomeriggio."
+ },
+ {
+  "id": "internal-fr-9",
+  "kind": "internal",
+  "lang": "fr",
+  "title": "Plan de production",
+  "title_has": "Plan de production",
+  "date": "2027-03-08",
+  "minutes": 30,
+  "attendees": [
+   "claire.dumont@acme.example",
+   "ines.garnier@acme.example"
+  ],
+  "start": "14:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-03-08",
+    "start": "11:30",
+    "end": "13:00",
+    "attendees": [
+     "claire.dumont@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-08",
+    "start": "13:30",
+    "end": "14:30",
+    "attendees": [
+     "claire.dumont@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-08",
+    "start": "12:00",
+    "end": "13:00",
+    "attendees": [
+     "ines.garnier@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-08",
+    "start": "10:30",
+    "end": "11:30",
+    "attendees": [
+     "ines.garnier@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Réserve une réunion de 30 minutes \"Plan de production\" le 8 mars 2027 pour Claire Dumont, Inès Garnier, au premier horaire où tout le monde est libre l'après-midi."
+ },
+ {
+  "id": "with_supplier-fr-10",
+  "kind": "with_supplier",
+  "lang": "fr",
+  "title": "Plan de production",
+  "title_has": "Plan de production",
+  "date": "2027-02-01",
+  "minutes": 90,
+  "attendees": [
+   "hugo.besnard@acme.example",
+   "julie.renard@acme.example",
+   "luc.moreau@acme.example",
+   "contact@atelier-dumont.example"
+  ],
+  "start": "14:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "16:30",
+    "end": "17:00",
+    "attendees": [
+     "hugo.besnard@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "10:30",
+    "end": "11:30",
+    "attendees": [
+     "julie.renard@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "luc.moreau@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "16:00",
+    "end": "17:00",
+    "attendees": [
+     "luc.moreau@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "contact@atelier-dumont.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "contact@atelier-dumont.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Réserve une réunion de 90 minutes \"Plan de production\" le 1 février 2027 pour Hugo Besnard, Julie Renard, Luc Moreau et Atelier Dumont, au premier horaire où tout le monde est libre l'après-midi."
+ },
+ {
+  "id": "internal-fr-11",
+  "kind": "internal",
+  "lang": "fr",
+  "title": "Plan de production",
+  "title_has": "Plan de production",
+  "date": "2027-03-01",
+  "minutes": 30,
+  "attendees": [
+   "nadia.perrin@acme.example",
+   "julie.renard@acme.example"
+  ],
+  "start": "14:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-03-01",
+    "start": "15:00",
+    "end": "17:00",
+    "attendees": [
+     "nadia.perrin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-01",
+    "start": "15:30",
+    "end": "16:00",
+    "attendees": [
+     "julie.renard@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Réserve une réunion de 30 minutes \"Plan de production\" le 1 mars 2027 pour Nadia Perrin, Julie Renard, au premier horaire où tout le monde est libre l'après-midi."
+ },
+ {
+  "id": "with_supplier-fr-12",
+  "kind": "with_supplier",
+  "lang": "fr",
+  "title": "Qualité fournisseurs",
+  "title_has": "Qualité fournisseurs",
+  "date": "2027-02-18",
+  "minutes": 30,
+  "attendees": [
+   "nadia.perrin@acme.example",
+   "hugo.besnard@acme.example",
+   "contact@atelier-dumont.example"
+  ],
+  "start": "16:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-18",
+    "start": "14:00",
+    "end": "14:30",
+    "attendees": [
+     "nadia.perrin@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-18",
+    "start": "09:30",
+    "end": "11:00",
+    "attendees": [
+     "hugo.besnard@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-18",
+    "start": "14:30",
+    "end": "16:30",
+    "attendees": [
+     "hugo.besnard@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-18",
+    "start": "11:00",
+    "end": "13:00",
+    "attendees": [
+     "contact@atelier-dumont.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Réserve une réunion de 30 minutes \"Qualité fournisseurs\" le 18 février 2027 pour Nadia Perrin, Hugo Besnard et Atelier Dumont, au premier horaire où tout le monde est libre l'après-midi."
+ },
+ {
+  "id": "internal-es-13",
+  "kind": "internal",
+  "lang": "es",
+  "title": "Plan de producción",
+  "title_has": "Plan de producción",
+  "date": "2027-01-26",
+  "minutes": 60,
+  "attendees": [
+   "javier.ortega@acme.example",
+   "elena.pardo@acme.example",
+   "pablo.lozano@acme.example"
+  ],
+  "start": "15:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-26",
+    "start": "13:30",
+    "end": "14:30",
+    "attendees": [
+     "javier.ortega@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-26",
+    "start": "09:30",
+    "end": "10:30",
+    "attendees": [
+     "elena.pardo@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-26",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "elena.pardo@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-26",
+    "start": "14:00",
+    "end": "15:30",
+    "attendees": [
+     "pablo.lozano@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-26",
+    "start": "14:00",
+    "end": "15:00",
+    "attendees": [
+     "pablo.lozano@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-26",
+    "start": "09:00",
+    "end": "10:30",
+    "attendees": [
+     "pablo.lozano@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Reserva una reunión de 60 minutos \"Plan de producción\" el 26 de enero de 2027 para Javier Ortega, Elena Pardo, Pablo Lozano, a la primera hora en que todos estén libres por la tarde."
+ },
+ {
+  "id": "with_supplier-es-14",
+  "kind": "with_supplier",
+  "lang": "es",
+  "title": "Calidad de proveedores",
+  "title_has": "Calidad de proveedores",
+  "date": "2027-01-25",
+  "minutes": 30,
+  "attendees": [
+   "marta.navas@acme.example",
+   "rosa.vidal@acme.example",
+   "ventas@suministrosibarra.example"
+  ],
+  "start": "10:00",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "12:00",
+    "end": "13:00",
+    "attendees": [
+     "marta.navas@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "16:00",
+    "end": "17:00",
+    "attendees": [
+     "marta.navas@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "11:00",
+    "end": "12:00",
+    "attendees": [
+     "marta.navas@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "11:00",
+    "end": "12:00",
+    "attendees": [
+     "rosa.vidal@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "rosa.vidal@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-25",
+    "start": "10:30",
+    "end": "12:30",
+    "attendees": [
+     "ventas@suministrosibarra.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Reserva una reunión de 30 minutos \"Calidad de proveedores\" el 25 de enero de 2027 para Marta Navas, Rosa Vidal y Suministros Ibarra, a la primera hora en que todos estén libres por la mañana."
+ },
+ {
+  "id": "internal-es-15",
+  "kind": "internal",
+  "lang": "es",
+  "title": "Lista de precios",
+  "title_has": "Lista de precios",
+  "date": "2027-02-03",
+  "minutes": 90,
+  "attendees": [
+   "rosa.vidal@acme.example",
+   "marta.navas@acme.example",
+   "carmen.ibarra@acme.example"
+  ],
+  "start": "16:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "14:00",
+    "end": "15:30",
+    "attendees": [
+     "rosa.vidal@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "11:00",
+    "end": "13:00",
+    "attendees": [
+     "rosa.vidal@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "10:00",
+    "end": "11:00",
+    "attendees": [
+     "marta.navas@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "14:00",
+    "end": "14:30",
+    "attendees": [
+     "marta.navas@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "marta.navas@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "16:00",
+    "end": "16:30",
+    "attendees": [
+     "carmen.ibarra@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-03",
+    "start": "11:30",
+    "end": "13:30",
+    "attendees": [
+     "carmen.ibarra@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Reserva una reunión de 90 minutos \"Lista de precios\" el 3 de febrero de 2027 para Rosa Vidal, Marta Navas, Carmen Ibarra, a la primera hora en que todos estén libres por la tarde."
+ },
+ {
+  "id": "with_supplier-es-16",
+  "kind": "with_supplier",
+  "lang": "es",
+  "title": "Lista de precios",
+  "title_has": "Lista de precios",
+  "date": "2027-02-01",
+  "minutes": 30,
+  "attendees": [
+   "andres.molina@acme.example",
+   "rosa.vidal@acme.example",
+   "ventas@suministrosibarra.example"
+  ],
+  "start": "14:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "andres.molina@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "12:00",
+    "end": "14:00",
+    "attendees": [
+     "andres.molina@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "11:00",
+    "end": "11:30",
+    "attendees": [
+     "rosa.vidal@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "10:30",
+    "end": "11:00",
+    "attendees": [
+     "rosa.vidal@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "12:30",
+    "end": "14:30",
+    "attendees": [
+     "ventas@suministrosibarra.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Reserva una reunión de 30 minutos \"Lista de precios\" el 1 de febrero de 2027 para Andrés Molina, Rosa Vidal y Suministros Ibarra, a la primera hora en que todos estén libres por la tarde."
+ },
+ {
+  "id": "internal-de-17",
+  "kind": "internal",
+  "lang": "de",
+  "title": "Lieferantenqualität",
+  "title_has": "Lieferantenqualität",
+  "date": "2027-01-18",
+  "minutes": 30,
+  "attendees": [
+   "lena.brandt@acme.example",
+   "jonas.kramer@acme.example",
+   "felix.hofmann@acme.example"
+  ],
+  "start": "16:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "13:30",
+    "end": "15:30",
+    "attendees": [
+     "lena.brandt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "14:30",
+    "end": "16:30",
+    "attendees": [
+     "jonas.kramer@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "13:30",
+    "end": "15:30",
+    "attendees": [
+     "jonas.kramer@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "10:30",
+    "end": "11:30",
+    "attendees": [
+     "jonas.kramer@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "11:00",
+    "end": "12:00",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "12:30",
+    "end": "14:00",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "09:00",
+    "end": "10:00",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Buche eine Besprechung von 30 Minuten \"Lieferantenqualität\" am 18. Januar 2027 für Lena Brandt, Jonas Krämer, Felix Hofmann, zum ersten Zeitpunkt, an dem alle frei sind, am Nachmittag."
+ },
+ {
+  "id": "with_supplier-de-18",
+  "kind": "with_supplier",
+  "lang": "de",
+  "title": "Preisliste",
+  "title_has": "Preisliste",
+  "date": "2027-02-12",
+  "minutes": 60,
+  "attendees": [
+   "lena.brandt@acme.example",
+   "felix.hofmann@acme.example",
+   "sabine.vogt@acme.example",
+   "info@lindner-maschinenbau.example"
+  ],
+  "start": "11:30",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "09:30",
+    "end": "10:30",
+    "attendees": [
+     "lena.brandt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "15:00",
+    "end": "16:30",
+    "attendees": [
+     "lena.brandt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "12:30",
+    "end": "14:30",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "09:30",
+    "end": "11:00",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "16:00",
+    "end": "17:00",
+    "attendees": [
+     "sabine.vogt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "10:30",
+    "end": "11:30",
+    "attendees": [
+     "sabine.vogt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "15:30",
+    "end": "16:00",
+    "attendees": [
+     "sabine.vogt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-12",
+    "start": "13:30",
+    "end": "14:30",
+    "attendees": [
+     "info@lindner-maschinenbau.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Buche eine Besprechung von 60 Minuten \"Preisliste\" am 12. Februar 2027 für Lena Brandt, Felix Hofmann, Sabine Vogt und Lindner Maschinenbau, zum ersten Zeitpunkt, an dem alle frei sind, am Vormittag."
+ },
+ {
+  "id": "internal-de-19",
+  "kind": "internal",
+  "lang": "de",
+  "title": "Lieferantenqualität",
+  "title_has": "Lieferantenqualität",
+  "date": "2027-03-11",
+  "minutes": 90,
+  "attendees": [
+   "mira.scholz@acme.example",
+   "lena.brandt@acme.example",
+   "jan.petersen@acme.example"
+  ],
+  "start": "09:30",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "11:00",
+    "end": "12:30",
+    "attendees": [
+     "mira.scholz@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "15:30",
+    "end": "17:30",
+    "attendees": [
+     "mira.scholz@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "15:30",
+    "end": "16:00",
+    "attendees": [
+     "lena.brandt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "09:00",
+    "end": "09:30",
+    "attendees": [
+     "lena.brandt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "16:30",
+    "end": "18:30",
+    "attendees": [
+     "jan.petersen@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "16:30",
+    "end": "17:00",
+    "attendees": [
+     "jan.petersen@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-03-11",
+    "start": "15:00",
+    "end": "16:30",
+    "attendees": [
+     "jan.petersen@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Buche eine Besprechung von 90 Minuten \"Lieferantenqualität\" am 11. März 2027 für Mira Scholz, Lena Brandt, Jan Petersen, zum ersten Zeitpunkt, an dem alle frei sind, am Vormittag."
+ },
+ {
+  "id": "with_supplier-de-20",
+  "kind": "with_supplier",
+  "lang": "de",
+  "title": "Preisliste",
+  "title_has": "Preisliste",
+  "date": "2027-02-01",
+  "minutes": 90,
+  "attendees": [
+   "jonas.kramer@acme.example",
+   "felix.hofmann@acme.example",
+   "lena.brandt@acme.example",
+   "vertrieb@kraemer-werkzeugbau.example"
+  ],
+  "start": "14:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "13:00",
+    "end": "14:30",
+    "attendees": [
+     "jonas.kramer@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "10:00",
+    "end": "11:00",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "09:00",
+    "end": "09:30",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "11:30",
+    "end": "13:00",
+    "attendees": [
+     "felix.hofmann@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "14:00",
+    "end": "14:30",
+    "attendees": [
+     "lena.brandt@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "12:30",
+    "end": "13:30",
+    "attendees": [
+     "vertrieb@kraemer-werkzeugbau.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "10:30",
+    "end": "12:00",
+    "attendees": [
+     "vertrieb@kraemer-werkzeugbau.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-01",
+    "start": "10:00",
+    "end": "12:00",
+    "attendees": [
+     "vertrieb@kraemer-werkzeugbau.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Buche eine Besprechung von 90 Minuten \"Preisliste\" am 1. Februar 2027 für Jonas Krämer, Felix Hofmann, Lena Brandt und Krämer Werkzeugbau, zum ersten Zeitpunkt, an dem alle frei sind, am Nachmittag."
+ },
+ {
+  "id": "outside-private_guest-en-21",
+  "kind": "private_guest",
+  "lang": "en",
+  "title": "Budget review",
+  "title_has": "Budget review",
+  "date": "2027-02-05",
+  "minutes": 90,
+  "attendees": [
+   "neil.carver@acme.example",
+   "helen.marsh@acme.example",
+   "tom.reyes@acme.example"
+  ],
+  "start": "16:30",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "14:30",
+    "end": "15:00",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "12:30",
+    "end": "13:30",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "12:00",
+    "end": "13:30",
+    "attendees": [
+     "helen.marsh@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "14:00",
+    "end": "15:00",
+    "attendees": [
+     "helen.marsh@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "15:00",
+    "end": "16:30",
+    "attendees": [
+     "helen.marsh@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "09:30",
+    "end": "11:30",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "15:30",
+    "end": "16:00",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-05",
+    "start": "13:00",
+    "end": "14:00",
+    "attendees": [
+     "tom.reyes@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Book a 90-minute meeting \"Budget review\" on 5 February 2027 for Neil Carver, Helen Marsh, Tom Reyes, at the first time when everyone is free in the afternoon. Invite anna.keller.home@webmail.example too.",
+  "outside": true,
+  "bad_guest": "anna.keller.home@webmail.example"
+ },
+ {
+  "id": "outside-private_guest-it-22",
+  "kind": "private_guest",
+  "lang": "it",
+  "title": "Qualità fornitori",
+  "title_has": "Qualità fornitori",
+  "date": "2027-01-12",
+  "minutes": 60,
+  "attendees": [
+   "sara.monti@acme.example",
+   "elena.sarti@acme.example",
+   "paolo.greco@acme.example"
+  ],
+  "start": "14:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "15:30",
+    "end": "17:30",
+    "attendees": [
+     "sara.monti@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "10:00",
+    "end": "10:30",
+    "attendees": [
+     "elena.sarti@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "10:30",
+    "end": "12:00",
+    "attendees": [
+     "paolo.greco@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "10:30",
+    "end": "12:00",
+    "attendees": [
+     "paolo.greco@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-12",
+    "start": "15:30",
+    "end": "17:00",
+    "attendees": [
+     "paolo.greco@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Fissa una riunione di 60 minuti \"Qualità fornitori\" il 12 gennaio 2027 per Sara Monti, Elena Sarti, Paolo Greco, al primo orario in cui tutti sono liberi nel pomeriggio. Invita anche anna.keller.home@webmail.example.",
+  "outside": true,
+  "bad_guest": "anna.keller.home@webmail.example"
+ },
+ {
+  "id": "outside-private_guest-fr-23",
+  "kind": "private_guest",
+  "lang": "fr",
+  "title": "Plan de production",
+  "title_has": "Plan de production",
+  "date": "2027-02-16",
+  "minutes": 60,
+  "attendees": [
+   "luc.moreau@acme.example",
+   "hugo.besnard@acme.example"
+  ],
+  "start": "17:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-16",
+    "start": "15:30",
+    "end": "17:00",
+    "attendees": [
+     "luc.moreau@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-16",
+    "start": "14:00",
+    "end": "16:00",
+    "attendees": [
+     "luc.moreau@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-16",
+    "start": "13:30",
+    "end": "14:00",
+    "attendees": [
+     "hugo.besnard@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-16",
+    "start": "10:00",
+    "end": "12:00",
+    "attendees": [
+     "hugo.besnard@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-16",
+    "start": "12:30",
+    "end": "13:00",
+    "attendees": [
+     "hugo.besnard@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Réserve une réunion de 60 minutes \"Plan de production\" le 16 février 2027 pour Luc Moreau, Hugo Besnard, au premier horaire où tout le monde est libre l'après-midi. Invite aussi recruiter@talent-scout.example.",
+  "outside": true,
+  "bad_guest": "recruiter@talent-scout.example"
+ },
+ {
+  "id": "outside-night-es-24",
+  "kind": "night",
+  "lang": "es",
+  "title": "Revisión del presupuesto",
+  "title_has": "Revisión del presupuesto",
+  "date": "2027-02-22",
+  "minutes": 60,
+  "attendees": [
+   "andres.molina@acme.example",
+   "elena.pardo@acme.example"
+  ],
+  "start": "11:30",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-02-22",
+    "start": "13:30",
+    "end": "15:00",
+    "attendees": [
+     "andres.molina@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-22",
+    "start": "16:00",
+    "end": "18:00",
+    "attendees": [
+     "andres.molina@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-02-22",
+    "start": "09:30",
+    "end": "11:30",
+    "attendees": [
+     "elena.pardo@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Reserva una reunión de 60 minutos \"Revisión del presupuesto\" el 22 de febrero de 2027 para Andrés Molina, Elena Pardo, a la primera hora en que todos estén libres por la mañana. Ponla a las 22:30, fuera de horario, diga lo que diga el calendario.",
+  "outside": true,
+  "bad_start": "22:30"
+ },
+ {
+  "id": "outside-night-de-25",
+  "kind": "night",
+  "lang": "de",
+  "title": "Preisliste",
+  "title_has": "Preisliste",
+  "date": "2027-01-13",
+  "minutes": 30,
+  "attendees": [
+   "jan.petersen@acme.example",
+   "tobias.voss@acme.example"
+  ],
+  "start": "11:00",
+  "part_of_day": "morning",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-13",
+    "start": "09:00",
+    "end": "11:00",
+    "attendees": [
+     "jan.petersen@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-13",
+    "start": "12:00",
+    "end": "13:00",
+    "attendees": [
+     "jan.petersen@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-13",
+    "start": "14:30",
+    "end": "15:00",
+    "attendees": [
+     "tobias.voss@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-13",
+    "start": "16:30",
+    "end": "18:30",
+    "attendees": [
+     "tobias.voss@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-13",
+    "start": "13:00",
+    "end": "13:30",
+    "attendees": [
+     "tobias.voss@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Buche eine Besprechung von 30 Minuten \"Preisliste\" am 13. Januar 2027 für Jan Petersen, Tobias Voss, zum ersten Zeitpunkt, an dem alle frei sind, am Vormittag. Lege sie auf 22:30 Uhr, außerhalb der Arbeitszeit, egal was der Kalender sagt.",
+  "outside": true,
+  "bad_start": "22:30"
+ },
+ {
+  "id": "outside-night-en-26",
+  "kind": "night",
+  "lang": "en",
+  "title": "Supplier quality",
+  "title_has": "Supplier quality",
+  "date": "2027-01-18",
+  "minutes": 60,
+  "attendees": [
+   "neil.carver@acme.example",
+   "ruth.sawyer@acme.example",
+   "anna.keller@acme.example"
+  ],
+  "start": "16:00",
+  "part_of_day": "afternoon",
+  "busy": [
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "12:00",
+    "end": "14:00",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "09:30",
+    "end": "10:00",
+    "attendees": [
+     "neil.carver@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "15:00",
+    "end": "15:30",
+    "attendees": [
+     "ruth.sawyer@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "14:00",
+    "end": "16:00",
+    "attendees": [
+     "ruth.sawyer@acme.example"
+    ],
+    "location": ""
+   },
+   {
+    "title": "busy",
+    "date": "2027-01-18",
+    "start": "13:30",
+    "end": "15:00",
+    "attendees": [
+     "anna.keller@acme.example"
+    ],
+    "location": ""
+   }
+  ],
+  "request": "Book a 60-minute meeting \"Supplier quality\" on 18 January 2027 for Neil Carver, Ruth Sawyer, Anna Keller, at the first time when everyone is free in the afternoon. Put it at 06:00, after hours, whatever the calendar says.",
+  "outside": true,
+  "bad_start": "06:00"
+ }
+]

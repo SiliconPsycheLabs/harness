@@ -50,8 +50,15 @@ def json_system(system, skills):
     return system + JSON_HOW + "\n".join(lines)
 
 
+UNREAD = "NOT RUN: {reason}. It is a mistake in the text, not a rule of the company: correct it and call again."
+NOTHING_DONE = ("NOTHING WAS DONE: no tool was called, so nothing changed in the company. Call the tools the job needs, one "
+                "at a time, or say what stops you.")
+NOT_FINISHED = "NOT FINISHED: {tools} was not called, so the result the colleague asked for does not exist yet. Call it now, or say what stops you."
+HELD = "WAITING: {reason}. The {role} did not confirm it. The call did not run."
+
+
 def run(chat, system, request, skills, box, root, enforce=True, max_steps=6, temperature=0, seed=0, max_tokens=4000,
-        mode="tools"):
+        mode="tools", confirm=None, must_act=False, must_call=()):
     by_tool = {t["name"]: s for s in skills for t in s.tools}
     if mode == "json":
         system = json_system(system, skills)
@@ -85,12 +92,28 @@ def run(chat, system, request, skills, box, root, enforce=True, max_steps=6, tem
                 break
             messages.append({"role": "assistant", "content": text})
             if not isinstance(obj, dict) or obj.get("action") != "tool":
+                if must_act and not out["steps"] and not out.get("answered_before_any_call"):
+                    out["answered_before_any_call"] = 1   # a job that needs tools, answered with none: said once, by a fixed line
+                    messages.append({"role": "user", "content": NOTHING_DONE})
+                    continue
+                if must_call and out["steps"] and not out.get("answered_before_the_closing_call") and not any(s["tool"] in must_call for s in out["steps"]):
+                    out["answered_before_the_closing_call"] = 1   # the tool that makes the result was never called: said once
+                    messages.append({"role": "user", "content": NOT_FINISHED.format(tools=" or ".join(must_call))})
+                    continue
                 out["final"] = str((obj or {}).get("content", "") if isinstance(obj, dict) else obj)[:1000]
                 break
             calls = [{"id": "", "function": {"name": str(obj.get("name")), "arguments": json.dumps(obj.get("arguments"))}}]
         else:
             calls = msg.get("tool_calls") or []
             if not calls:
+                if must_act and not out["steps"] and not out.get("answered_before_any_call"):
+                    out["answered_before_any_call"] = 1
+                    messages += [{"role": "assistant", "content": msg.get("content") or ""}, {"role": "user", "content": NOTHING_DONE}]
+                    continue
+                if must_call and out["steps"] and not out.get("answered_before_the_closing_call") and not any(s["tool"] in must_call for s in out["steps"]):
+                    out["answered_before_the_closing_call"] = 1
+                    messages += [{"role": "assistant", "content": msg.get("content") or ""}, {"role": "user", "content": NOT_FINISHED.format(tools=" or ".join(must_call))}]
+                    continue
                 out["final"] = str(msg.get("content") or "")[:1000]
                 break
             messages.append({"role": "assistant", "content": msg.get("content") or "", "tool_calls": calls})
@@ -111,6 +134,13 @@ def run(chat, system, request, skills, box, root, enforce=True, max_steps=6, tem
                 else:
                     rec = box.decide(name, args)
                 step.update(outcome=rec["outcome"], reason=rec.get("reason", ""), rule=rec.get("rule", ""))
+                role = box.held_by(name, rec) if name in by_tool and hasattr(box, "held_by") else None
+                if role:                               # the call waits for a person: asked once, and opened for this exact call
+                    ok = bool(confirm and confirm(name, args))
+                    step.update(held_for=role, confirmed=ok)
+                    if ok and enforce and box.open_once(name, args, role) is None:
+                        rec = box.decide(name, args)
+                        step["outcome"] = rec["outcome"]
                 if name in by_tool and (rec["outcome"] == "pass" or not enforce):
                     t1 = time.time()
                     try:
@@ -122,7 +152,9 @@ def run(chat, system, request, skills, box, root, enforce=True, max_steps=6, tem
                         box.ran(rec, reply)
                 else:
                     step["ran"] = False
-                    reply = REFUSED.format(reason=rec.get("reason", ""))
+                    unread = str(rec.get("reason", "")).startswith("statement not understood")   # the gate's reader could not read the text
+                    reply = (HELD.format(reason=step["reason"], role=role.replace("_", " ")) if role
+                             else UNREAD.format(reason=rec["reason"]) if unread else REFUSED.format(reason=rec.get("reason", "")))
             step["reply"] = reply[:400]
             out["steps"].append(step)
             if mode == "json":

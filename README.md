@@ -23,6 +23,21 @@ skill from the tool's own input schema (`harness/tablec/`), then adds the compan
 reason, a field that must be one of a list of the company, a condition on the arguments, the folders a path may touch.
 A new skill therefore arrives with its rules.
 
+Two more things a skill can say in its `skill.json`:
+
+- **An action waits for a person** (`limits.held`): the tool's call is held with a fixed reason until a person of the
+  named role opens that exact call, once. In a test the person is the skill's `check.confirms(task, tool, args,
+  company)`, a program; in production it is whoever answers the gate's question. `payments` holds every payment this
+  way, after a deterministic check that the bank account is the one on file for the supplier.
+- **A job made of several skills** (`uses`): a skill with no tool of its own takes named tools of other skills, each
+  with the rules it already had. `accounts_payable` is one agent that reads the invoice (`pdf`), enters it
+  (`supplier_bill`) and writes to the supplier (`mail`).
+- **A database behind the gate** (`limits.database`): the tables, their columns and which of them may be read or
+  changed. The gate reads the SQL statement itself before it runs, so a closed column does not pass inside a sort or
+  a subquery either.
+- **What makes a small model finish** (`must_act`, `must_call`): one fixed line, once, when a job is answered with no
+  tool called, or ended before the tool that makes its result was called. The card counts how often.
+
 | Skill | Where it works | Tools |
 | --- | --- | --- |
 | `word` | the company's file tree | `write_docx` |
@@ -30,6 +45,14 @@ A new skill therefore arrives with its rules.
 | `pdf` | the company's file tree | `read_pdf`, `save_record` |
 | `mail` | the company's file tree and an outbox | `find_contact`, `send_mail` |
 | `supplier_bill` | a real accounting application (Odoo 17, invented data) | `find_supplier`, `create_supplier_bill`, `create_supplier`, `set_supplier_bank` |
+| `powerpoint` | the company's file tree | `write_pptx` |
+| `calendar` | the company calendar | `find_person`, `find_free_slots`, `create_event` |
+| `filing` | the company's file tree | `list_folder`, `copy_file`, `move_file` |
+| `doc_search` | the company's contracts and policies | `search_documents`, `read_document`, `save_answer` |
+| `database` | the company's sales database (SQLite), behind the gate's SQL reader | `describe_database`, `run_query`, `save_answer` |
+| `payments` | the same accounting application | `list_open_bills`, `pay_bill` (held for a person) |
+| `credit_control` | the accounting application and an outbox | `list_overdue_invoices`, `send_reminder`, `write_off_invoice`, `extend_due_date` |
+| `accounts_payable` | the file tree and the accounting application together | the tools of `pdf`, `supplier_bill` and `mail` |
 
 ## Run one
 
