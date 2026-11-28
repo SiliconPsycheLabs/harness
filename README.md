@@ -63,6 +63,7 @@ Two more things a skill can say in its `skill.json`:
 | `sales_report` | the company's database, the file tree and an outbox | the tools of `database`, `excel`, `calendar` (the staff directory) and `mail` |
 | `payment_run` | the accounting application and an outbox | the tools of `payments` and `mail` |
 | `purchasing` | the file tree (quotes in the inbox) and an outbox | the tools of `pdf`, `excel` and `mail`, and a hold of its own on the order mail |
+| `customer_support` | the sales database, the company's documents and an outbox | three tools of its own (`find_customer`, `reply_to_customer`, `propose_refund`) and the tools of `database` and `doc_search` |
 
 ## Run one
 

@@ -7,6 +7,15 @@ CONTACTS = {"Northwind Bearings Ltd": "orders@northwind-bearings.example", "Harb
             "Krämer Werkzeugbau GmbH": "vertrieb@kraemer-werkzeugbau.example", "Lindner Maschinenbau AG": "info@lindner-maschinenbau.example"}
 
 
+# The customers of the sales database with the address the company holds for each: a reply goes there and nowhere else.
+CUSTOMER_MAIL = {"Calder Fasteners Ltd": "accounts@calder-fasteners.example", "Pennant Hydraulics Inc.": "ap@pennant-hydraulics.example",
+                 "Oakridge Abrasives Ltd": "office@oakridge-abrasives.example", "Meccanica Ferraro S.r.l.": "amministrazione@meccanicaferraro.example",
+                 "Fonderia Sarti S.p.A.": "contabilita@fonderiasarti.example", "Outillage Besnard SARL": "compta@outillage-besnard.example",
+                 "Fonderie Vasseur SARL": "comptabilite@fonderie-vasseur.example", "Herramientas Lozano S.L.": "administracion@herramientaslozano.example",
+                 "Fundiciones Aranda S.A.": "contabilidad@fundicionesaranda.example", "Brandt Präzisionsteile GmbH": "buchhaltung@brandt-praezisionsteile.example",
+                 "Seidel Gusstechnik AG": "rechnungen@seidel-gusstechnik.example", "Voss Schraubenwerk GmbH": "einkauf@voss-schraubenwerk.example"}
+
+
 def address(name):
     """A colleague's address: name.surname@acme.example, lower case, no accents."""
     import unicodedata
@@ -19,7 +28,7 @@ def _staff():
 
 
 STAFF = _staff()
-READ, WRITE, REGISTER = world.READ, world.WRITE, {"mail_contacts": sorted(CONTACTS.values()), "staff": sorted(set(STAFF.values()))}
+READ, WRITE, REGISTER = world.READ, world.WRITE, {"mail_contacts": sorted(CONTACTS.values()), "staff": sorted(set(STAFF.values())), "customer_mail": CUSTOMER_MAIL}
 
 
 def build(root, key):
