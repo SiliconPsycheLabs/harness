@@ -39,7 +39,8 @@ Two more things a skill can say in its `skill.json`:
   own address reader, and a host is opened like a folder or a database table. An internal address, another site or
   an address written to deceive does not pass.
 - **What makes a small model finish** (`must_act`, `must_call`): one fixed line, once, when a job is answered with no
-  tool called, or ended before the tool that makes its result was called. The card counts how often.
+  tool called, or ended before the tool that makes its result was called. The card counts how often. After an answer
+  with nothing done, the form of the next step holds only the calls: a job that needs its tools is not closed by words.
 
 | Skill | Where it works | Tools |
 | --- | --- | --- |

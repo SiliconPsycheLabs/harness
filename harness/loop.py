@@ -34,13 +34,16 @@ def _shape(schema):
     return schema
 
 
-def step_schema(skills):
+def step_schema(skills, final=True):
+    """The form of one step: a call of one of the tools, or the final answer. With `final=False` the form holds only
+    the calls: the step of a job that must act, after an answer given with no tool called."""
     tools = [t for s in skills for t in s.tools]
     branches = [{"type": "object", "additionalProperties": False, "required": ["action", "name", "arguments"],
                  "properties": {"action": {"const": "tool"}, "name": {"const": t["name"]}, "arguments": _shape(t["inputSchema"])}}
                 for t in tools]
-    branches.append({"type": "object", "additionalProperties": False, "required": ["action", "content"],
-                     "properties": {"action": {"const": "final"}, "content": {"type": "string"}}})
+    if final:
+        branches.append({"type": "object", "additionalProperties": False, "required": ["action", "content"],
+                         "properties": {"action": {"const": "final"}, "content": {"type": "string"}}})
     return {"anyOf": branches}
 
 
@@ -51,8 +54,8 @@ def json_system(system, skills):
 
 
 UNREAD = "NOT RUN: {reason}. It is a mistake in the text, not a rule of the company: correct it and call again."
-NOTHING_DONE = ("NOTHING WAS DONE: no tool was called, so nothing changed in the company. Call the tools the job needs, one "
-                "at a time, or say what stops you.")
+NOTHING_DONE = ("NOTHING WAS DONE: no tool was called, so nothing changed in the company. Call the first tool the job "
+                "needs now; after it has answered you can go on, or say what stops you.")
 NOT_FINISHED = "NOT FINISHED: {tools} was not called, so the result the colleague asked for does not exist yet. Call it now, or say what stops you."
 HELD = "WAITING: {reason}. The {role} did not confirm it. The call did not run."
 
@@ -69,10 +72,13 @@ def run(chat, system, request, skills, box, root, enforce=True, max_steps=6, tem
         t0 = time.time()
         try:
             ask = {"messages": messages, "temperature": temperature, "seed": seed, "max_tokens": max_tokens}
+            act_now = bool(must_act and out.get("answered_before_any_call") and not out["steps"])   # answered with nothing done: the next step is a call
             if mode == "json":
-                ask["response_format"] = {"type": "json_schema", "json_schema": {"name": "step", "schema": step_schema(skills)}}
+                ask["response_format"] = {"type": "json_schema", "json_schema": {"name": "step", "schema": step_schema(skills, final=not act_now)}}
             else:
                 ask["tools"] = tool_specs(skills)
+                if act_now:
+                    ask["tool_choice"] = "required"
             got = chat(ask)
         except Exception as x:  # noqa: BLE001  the row says what broke
             out["error"] = f"{type(x).__name__}: {x}"[:300]

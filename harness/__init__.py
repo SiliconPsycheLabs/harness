@@ -12,4 +12,4 @@ model and from the gate). The table the gate reads is compiled from the tools' o
     run.py      golden (no model), run (rows written one by one), measure (the card)
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
